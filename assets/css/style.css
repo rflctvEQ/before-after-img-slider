@@ -1,0 +1,86 @@
+body {
+    background-color: #222;
+    color: #ccc;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.slide-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.auto-margin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner {
+    position: absolute; 
+    /* width: 800px;
+    height: 450px; */
+}
+
+.pic1 {
+    /* background-color: blue; */
+    /* width: 100%; */
+    /* background-color: #ccc; */
+}
+
+.pic2 {
+    /* background-color: red; */
+    /* background-color: #ccc; */
+    /* width: 100%; */
+    overflow: hidden;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 800px; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+ 
+/* Mouse-over effects -- this is causing a bug where the slider seems to move behind the images and flashes uncontrollably */
+/* .slider:hover {
+  opacity: 1; 
+}  */
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgb(83, 83, 83); /* Green background */
+  border-radius: 50%;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgb(83, 83, 83); /* Green background */
+  border-radius: 50%;
+  cursor: pointer; /* Cursor on hover */
+}  
+
+@media screen and (max-width: 900px) {
+    .slider {
+        width: 80vw;
+    }
+
+    img {
+        width: 80vw;
+        height: 45vw;
+    }
+}
